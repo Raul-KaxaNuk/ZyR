@@ -2,8 +2,8 @@ import streamlit as st
 # import gmaps
 # from ipywidgets import embed
 # import streamlit.components.v1 as components
-from streamlit_folium import folium_static
-from folium import Map
+# from streamlit_folium import folium_static
+# from folium import Map
 
 # Set the website layouts
 st.set_page_config(
