@@ -117,21 +117,23 @@ if side_options == 'Locación':
             map_html = f'<iframe width="{map_width}" height="{map_height}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{google_maps_embed_link}"></iframe>'
 
             # Apply CSS styling to resize the map container
-            map_style = f"""
-            <style>
-                div.stFrame.stIframe.sandboxRoot.ve-map-container {{
-                    width: {map_width}px;
-                    height: {map_height}px;
-                }}
+            map_style = f"<style>div.stFrame.stIframe.sandboxRoot.ve-map-container{{ width: {map_width}px; height: {map_height}px; }}</style>"
 
-                @media only screen and (max-width: 600px) {{
-                    div.stFrame.stIframe.sandboxRoot.ve-map-container {{
-                        width: 100%;
-                        height: 300px; /* Adjust the height for smaller screens */
-                    }}
-                }}
-            </style>
-            """
+            # map_style = f"""
+            # <style>
+            #     div.stFrame.stIframe.sandboxRoot.ve-map-container {{
+            #         width: {map_width}px;
+            #         height: {map_height}px;
+            #     }}
+            #
+            #     @media only screen and (max-width: 600px) {{
+            #         div.stFrame.stIframe.sandboxRoot.ve-map-container {{
+            #             width: 100%;
+            #             height: 300px; /* Adjust the height for smaller screens */
+            #         }}
+            #     }}
+            # </style>
+            # """
             # Render the map with custom size
             st.markdown(map_style, unsafe_allow_html=True)
             st.markdown(map_html, unsafe_allow_html=True)
