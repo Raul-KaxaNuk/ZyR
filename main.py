@@ -26,7 +26,7 @@ st.markdown(
 # st.image('inputs/Home.png')
 left_co, cent_co, last_co = st.columns([1, 8, 1])
 with cent_co:
-    st.image('inputs/Home.png')
+    st.image('Inputs/Home.png')
     streamlit_style = """
     			<style>
     			@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap');
