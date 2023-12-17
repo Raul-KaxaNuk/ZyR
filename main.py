@@ -12,8 +12,8 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-st.sidebar.title("Zanya y Raul 2024")
-
+# st.sidebar.title("Zanya y Raul 2024")
+st.sidebar.image('Inputs/Title_zr.png')
 
 
 st.markdown(
@@ -58,6 +58,7 @@ if side_options == 'Detalles del Evento':
         # 			"""
 
         # st.markdown(streamlit_style, unsafe_allow_html=True)
+
         original_title = '<h1 style="font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 60px;">Zanya y Raul</h1>'
         st.markdown(original_title, unsafe_allow_html=True)
 
@@ -70,12 +71,37 @@ if side_options == 'Detalles del Evento':
         # st.markdown('RAUL Y ZANYA', unsafe_allow_html=True)
 
         st.markdown("""
+            <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
+                Tenemos el placer de invitarte a nuestra gran fiesta!
+                Compartir este dia contigo nos llena de emoción, por lo que queremos invitarte. 
+                </p1>
+            
+            """, unsafe_allow_html=True)
+
+
+        mesa_de_regalos = 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51344282'
+
+        st.markdown("""
+            <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
+                Lo más importante para nosotros es poder celebrar nuestra boda junto a ustedes. Si gustan hacernos un regalo, 
+                lo pueden seleccionar de  nuestra mesa de regalos en Liverpool con el siguiente número de mesa; 51344282.
+                O en el siguiente link:
+                </p1>
+
+            """, unsafe_allow_html=True)
+
+        st.markdown(""" [Nuestra mesa de regalos Liverpool](%s) """ % mesa_de_regalos, unsafe_allow_html=True)
+
+        st.markdown("""
+            <h1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
+                El Evento será solo para adultos
+                </h1>
+
+            """, unsafe_allow_html=True)
+        st.markdown("""
         <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
-            Tenemos el placer de invitarte a nuestra gran fiesta!
-            Compartir este dia contigo nos llena de emoción, por lo que queremos invitarte
-            Por favor confirma tu asistencia en:
+            Podrás confirmar tu asistencia proximamente en:
             </p1>
-        
         """, unsafe_allow_html=True)
         # st.markdown("<h1 style='text-align: center; color: black;'>Tenemos el placer de invitarte a nuestra gran fiesta!</h1>", unsafe_allow_html=True)
         # st.markdown("<h1 style='text-align: center; color: black;'> </h1>", unsafe_allow_html=True)
@@ -86,24 +112,9 @@ if side_options == 'Detalles del Evento':
 if side_options == 'Locación':
     left_co, cent_co, last_co = st.columns([1, 8, 1])
     with cent_co:
-        original_title = '<h1 style="font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 60px;">Zanya y Raul</h1>'
-
-
-        st.markdown(original_title, unsafe_allow_html=True)
-
-        # snippet = embed.embed_snippet(views=map)
-        # html = embed.html_template.format(title="", snippet=snippet)
-        # components.html(html, height=500, width=500)
-        # m = Map(location=[40.7128, -74.0060], zoom_start=13)
-        #
-        # # Add your desired map features and markers
-        #
-        # # ...
-        #
-        # # Generate HTML representation
-        # map = folium_static(m)
-        # # st.write(map)
-
+        st.image('Inputs/Title_zr.png')
+        # original_title = '<h1 style="font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 60px;">Zanya y Raul, Abril 27, 2024</h1>'
+        # st.markdown(original_title, unsafe_allow_html=True)
 
 
         def map_with_custom_size(height, width):
@@ -117,7 +128,7 @@ if side_options == 'Locación':
             map_html = f'<iframe width="{map_width}" height="{map_height}" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{google_maps_embed_link}"></iframe>'
 
             # Apply CSS styling to resize the map container
-            map_style = f"<style>div.stFrame.stIframe.sandboxRoot.ve-map-container{{ width: {map_width}px; height: {map_height}px; }}</style>"
+            map_style = f"<style>div.stFrame.stIframe.sandboxRoot.ve-map-container{{ width: {map_width}px; height: {map_height}px; max-width: 100%;}}</style>"
 
             # map_style = f"""
             # <style>
