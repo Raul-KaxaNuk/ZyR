@@ -71,8 +71,8 @@ if side_options == 'Detalles del Evento':
         # st.markdown('RAUL Y ZANYA', unsafe_allow_html=True)
 
         st.markdown("""
-            <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
-                Tenemos el placer de invitarte a nuestra gran fiesta!
+            <p1 style='font-family:Hedvig Letters Serif; color:black; font-size: 24px;'>
+                ¡Tenemos el placer de invitarte a nuestra Boda!
                 Compartir este dia contigo nos llena de emoción, por lo que queremos invitarte. 
                 </p1>
             
@@ -82,15 +82,15 @@ if side_options == 'Detalles del Evento':
         mesa_de_regalos = 'https://mesaderegalos.liverpool.com.mx/milistaderegalos/51344282'
 
         st.markdown("""
-            <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
+            <p1 style='font-family:Hedvig Letters Serif; color:black; font-size: 24px;'>
                 Lo más importante para nosotros es poder celebrar nuestra boda junto a ustedes. Si gustan hacernos un regalo, 
-                lo pueden seleccionar de  nuestra mesa de regalos en Liverpool con el siguiente número de mesa; 51344282.
-                O en el siguiente link:
+                lo pueden seleccionar de  nuestra mesa de regalos en Liverpool con el número de mesa: 51344282. </br>
+                Tambien la puedes encontrar en el siguiente link:
                 </p1>
 
             """, unsafe_allow_html=True)
 
-        st.markdown(""" [Nuestra mesa de regalos Liverpool](%s) """ % mesa_de_regalos, unsafe_allow_html=True)
+        st.markdown("""*[Nuestra mesa de regalos Liverpool](%s)*""" % mesa_de_regalos, unsafe_allow_html=True)
 
         st.markdown("""
             <h1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
@@ -108,6 +108,9 @@ if side_options == 'Detalles del Evento':
         # st.markdown("<h1 style='text-align: center; color: black;'>Por favor confirma tu asistencia en:</h1>", unsafe_allow_html=True)
         # # st.image('inputs/Home.png')
         st.image('Inputs/Invitacion.png')
+        st.image('Inputs/Fotos.png')
+
+
 
 if side_options == 'Locación':
     left_co, cent_co, last_co = st.columns([1, 8, 1])
@@ -150,17 +153,17 @@ if side_options == 'Locación':
             st.markdown(map_html, unsafe_allow_html=True)
 
         # Display the map
-        map_with_custom_size(height=600, width=1200)
+        map_with_custom_size(height=600, width=1000)
 
         st.markdown("""
-        <p1 style='font-family:Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
+        <p1 style='font-family: Hedvig Letters Serif; text-align: center; color:black; font-size: 24px;'>
             El Evento será en el Jardin Cali Coanatl, a 15 minutos del centro de Cholula y 20 de Explanada Puebla
             Dirección: Reforma 2, Cuanalá, 72640 Puebla, Pue., Mexico. 
             </p1>
 
         """, unsafe_allow_html=True)
 
-        st.image('Inputs/Grecas.png')
+        # st.image('Inputs/Grecas.png')
 
 # "# Center an image when in fullscreen"
 # "Images (and most elements in general) are always aligned to the left"
